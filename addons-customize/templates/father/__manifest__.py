@@ -29,7 +29,7 @@
     'category': 'Extra Tools',
     'summary': 'Father.',
     'depends': ['base'],
-    'data': [
+    'data': [  'security/ir.model.access.csv',
               'views/views.xml',
             ],
     'images': ['static/description/banner.jpg'],
