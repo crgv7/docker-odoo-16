@@ -20,7 +20,7 @@
 ##############################################################################
 
 {
-    'name': 'Father MFH',
+    'name': 'Father',
     'version': '16.0.1.0.0',
     'author': 'Marlon Falcon Hernandez',
     'maintainer': 'Marlon Falcon Hernandez',
