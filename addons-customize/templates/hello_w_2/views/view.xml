@@ -4,6 +4,7 @@
         <field name="name">view.hello.world.inh.form</field>
         <field name="model">ej.pet</field>
         <field name="inherit_id" ref="father.view_ej_pet_form"/>
+        <!--<field name="mode">primary</field> -->
         <field name="arch" type="xml">
             <field name="name" position="after">
                 <field name="piel"/>
