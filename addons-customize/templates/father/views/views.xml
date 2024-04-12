@@ -46,6 +46,7 @@
         <field name="view_mode">tree,form</field> 
         <field name="view_id"  ref="view_tree_ej_pet" />
     </record> 
+    
 <!--  Declaramos los menu --> 
 <menuitem id="ej_pets_menu" name="Pets" web_icon="stock,static/description/icon.png" sequence="10"/> 
 <menuitem id="submenu_ej_pets_menu" name="Pets" sequence="10" parent="ej_pets_menu"/> 
