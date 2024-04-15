@@ -1,20 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
+<data>
+
     <record id="view_donaciones_form" model="ir.ui.view" >
       <field name="name">donaciones form</field>
       <field name="model">res.partner</field>
       <field name="inherit_id" ref="base.view_partner_form"/>
       <field name="mode">primary</field>
       <field name="arch" type="xml">
+
+        <xpath expr="//sheet/div/field[@name='company_type']" position="replace">
+         <field name="tipo_donacion" widget="radio" options="{'horizontal': true}"/>
+        </xpath>
+
+        <xpath expr="//sheet/div/h1/field[@id='individual']" position="replace">
+         <field name="nombre_donante" placeholder='Nombre'/>
+        </xpath>
+
+        <xpath expr="//sheet/div/div[@class='o_row']" position="before">
+         <field name="apellido_donante" placeholder='Apellido'/>
+        </xpath>
+
+
+
+
+
+
+
         <xpath expr="//sheet/notebook/page[@name='internal_notes']" position="after">
           <page name="devs" string="Donaciones">
             <group>
               <group>
-            
-             <button string="Mi Botón" />
-             
-             
-
+             <a class="btn btn-primary" href="#" role="button">Donar</a>
               </group>
             </group>
           </page>
@@ -63,7 +80,7 @@
 
       
 
- 
+ </data>
 </odoo>
 
 

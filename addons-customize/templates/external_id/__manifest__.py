@@ -20,11 +20,11 @@
 ##############################################################################
 
 {
-    'name': 'Donaciones',
+    'name': 'Father MFH',
     'version': '16.0.1.0.0',
     'author': 'Marlon Falcon Hernandez',
-    'maintainer': 'Carlos Garcia',
-    'website': 'http://github.com',
+    'maintainer': 'Marlon Falcon Hernandez',
+    'website': 'http://www.marlonfalcon.com',
     'license': 'AGPL-3',
     'category': 'Extra Tools',
     'summary': 'Short summary.',
@@ -32,12 +32,5 @@
     'data': [
         'views/view.xml',
     ],
-
-    #'assets': {
-    #'web.assets_frontend': [
-    #    'donaciones/static/src/css/bootstrap.min.css',
-    #],
-    #},
-
     'images': ['static/description/banner.png'],
 }
