@@ -21,7 +21,7 @@
 
 {
     'name': 'Father',
-    'version': '16.0.1.0.0',
+    'version': '17.0.1.0.0',
     'author': 'Marlon Falcon Hernandez',
     'maintainer': 'Marlon Falcon Hernandez',
     'website': 'http://www.marlonfalcon.com',
