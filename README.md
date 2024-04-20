@@ -1,13 +1,15 @@
 # Docker Odoo 17.0 With PostgreSQL 15
 by Carlos Garcia
 
-#construir imagen
+Construir imagen
+
 docker compose up --build
 
-#ejecutar contenedor
+Ejecutar contenedor
+
 docker compose up
 
 
-#Eliminar imgen
+Eliminar imgen
 
 docker compose down
