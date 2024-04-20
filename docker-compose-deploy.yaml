@@ -19,9 +19,9 @@ services:
       - "8069:8069"
     volumes:
       - odoo-web-data:/var/lib/odoo
-      - ./crgv7/docker-odoo-16/config:/etc/odoo
-      - ./crgv7/docker-odoo-16/addons:/mnt/extra-addons
-      - ./crgv7/docker-odoo-16/addons-customize:/mnt/extra-addons-customize
+      - /crgv7/docker-odoo-16/config:/etc/odoo
+      - /crgv7/docker-odoo-16/addons:/mnt/extra-addons
+      - /crgv7/docker-odoo-16/addons-customize:/mnt/extra-addons-customize
      
       
 
