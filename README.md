@@ -3,7 +3,7 @@ by Carlos Garcia
 
 Construir imagen
 
-docker compose up --build
+docker compose up  --build
 
 Ejecutar contenedor
 
