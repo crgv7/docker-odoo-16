@@ -19,9 +19,9 @@ services:
       - "8069:8069"
     volumes:
       - odoo-web-data:/var/lib/odoo
-      - config:/etc/odoo
-      - addons:/mnt/extra-addons
-      - addons-customize:/mnt/extra-addons-customize
+      - /var/lib/docker/config:/etc/odoo
+      - /var/lib/docker/addons:/mnt/extra-addons
+      - /var/lib/docker/addons-customize:/mnt/extra-addons-customize
       
 
   db:
