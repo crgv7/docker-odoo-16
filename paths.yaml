@@ -1,0 +1,3 @@
+version: '3'
+# Path to a data directory
+data_dir: ./config
