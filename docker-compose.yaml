@@ -1,5 +1,13 @@
 version: '3.1'
 services:
+  python:
+    image: python:3.9
+
+    volumes:
+      - ./requirements.txt:/app/requirements.txt  # Mount requirements.txt
+    command: pip install -r /app/requirements.txt  # Install libraries during startup
+    # ... otros parámetros de configuración
+
 
 
   web:
@@ -11,9 +19,10 @@ services:
       - "8069:8069"
     volumes:
       - odoo-web-data:/var/lib/odoo
-      - ./config:/etc/odoo:rwx
+      - ./config:/etc/odoo
       - ./addons:/mnt/extra-addons
       - ./addons-customize:/mnt/extra-addons-customize
+   
       
 
   db:
