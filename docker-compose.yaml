@@ -1,38 +1,38 @@
-version: '3'
+version: '3.1'
 services:
+  python: python:
+    image: python:3.9
+    volumes:
+      - ./requirements.txt:/app/requirements.txt  # Mount requirements.txt
+    command: pip install -r /app/requirements.txt  # Install libraries during startup
+    # ... otros parámetros de configuración
+  
+
+
+
   web:
-    platform: linux/x86_64
-    container_name: ${WEB_HOST}
-    image: ${WEB_IMAGE_NAME}:${WEB_IMAGE_TAG}
-    build: ./
+    image: odoo:17.0
+
     depends_on:
-      - db16
+      - db
     ports:
-      - "${WEB_PORT}:8069"
+      - "8069:8069"
     volumes:
       - odoo-web-data:/var/lib/odoo
       - ./config:/etc/odoo
       - ./addons:/mnt/extra-addons
       - ./addons-customize:/mnt/extra-addons-customize
+   
+      
+
+  db:
+    image: postgres:15
     environment:
-      - VIRTUAL_HOST=odoo15.marlonfalcon.com
-    entrypoint: "/usr/bin/odoo -c /etc/odoo/odoo.conf"
-    restart: always
-  db16:
-    platform: linux/x86_64
-    container_name: ${DB_HOST}
-    image: ${DB_IMAGE}:${DB_TAG}
-    environment:
-      - POSTGRES_DB=db16
-      - POSTGRES_PASSWORD=odoo16
-      - POSTGRES_USER=odoo16
-      - PGDATA=/var/lib/postgresql/data/pgdata
-    ports:
-      - "${DB_PORT}:5432"
-    volumes:
-      - odoo-db-data:/var/lib/postgresql/data/pgdata
-    restart: always
+      - POSTGRES_DB=postgres
+      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_USER=odoo 
+ 
 
 volumes:
-  odoo-db-data:
-  odoo-web-data:
+  odoo-web-data:      
+ 

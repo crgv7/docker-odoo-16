@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_hello_world_inh_form" model="ir.ui.view">
+        <field name="name">view.hello.world.inh.form</field>
+        <field name="model">ej.pet</field>
+        <field name="inherit_id" ref="father.view_ej_pet_form"/>
+        <!--<field name="mode">primary</field> -->
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="piel"/>
+                <field name="is_pretty_name"/>
+             
+               <!-- <field name='paseo' /> -->
+            </field>
+
+            
+            <field name="is_new" position="replace">
+                <field name="paseo" />
+            </field>
+
+
+        </field>
+    </record>
+
+      <record id="view_hello_world_inh_tree" model="ir.ui.view">
+        <field name="name">view.hello.world.inh.tree</field>
+        <field name="model">ej.pet</field>
+        <field name="inherit_id" ref="father.view_tree_ej_pet"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="paseo" optional='show'/>
+                <field name="piel" optional='show'/>
+                <field name="is_pretty_name"/>
+               
+            </field>
+        </field>
+    </record>
+
+
+ 
+</odoo>

@@ -20,8 +20,8 @@
 ##############################################################################
 
 {
-    'name': 'Father MFH',
-    'version': '16.0.1.0.0',
+    'name': 'Father',
+    'version': '17.0.1.0.0',
     'author': 'Marlon Falcon Hernandez',
     'maintainer': 'Marlon Falcon Hernandez',
     'website': 'http://www.marlonfalcon.com',
@@ -29,8 +29,10 @@
     'category': 'Extra Tools',
     'summary': 'Father.',
     'depends': ['base'],
-    'data': [
+    'data': [  'security/ir.model.access.csv',
               'views/views.xml',
+              'data/data_pet.xml',
+              'data/ir_sequence.xml',
             ],
     'images': ['static/description/banner.jpg'],
 }
