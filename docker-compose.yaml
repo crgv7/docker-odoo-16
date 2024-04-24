@@ -1,12 +1,12 @@
 version: '3.1'
 services:
-  python:
+  python: python:
     image: python:3.9
-
     volumes:
       - ./requirements.txt:/app/requirements.txt  # Mount requirements.txt
     command: pip install -r /app/requirements.txt  # Install libraries during startup
     # ... otros parámetros de configuración
+  
 
 
 
